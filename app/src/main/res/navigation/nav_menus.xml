@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_menus"
+    app:startDestination="@id/foodMenusFragment">
+
+    <fragment
+        android:id="@+id/foodMenusFragment"
+        android:name="com.example.foodmanagement.presentaions.views.fragments.FoodMenusFragment"
+        android:label="fragment_food_menus"
+        tools:layout="@layout/fragment_food_menus" >
+        <action
+            android:id="@+id/action_foodMenusFragment_to_drinkMenusFragment"
+            app:destination="@id/drinkMenusFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drinkMenusFragment"
+        android:name="com.example.foodmanagement.presentaions.views.fragments.DrinkMenusFragment"
+        android:label="fragment_drink_menus"
+        tools:layout="@layout/fragment_drink_menus" >
+        <action
+            android:id="@+id/action_drinkMenusFragment_to_foodMenusFragment"
+            app:destination="@id/foodMenusFragment" />
+    </fragment>
+
+</navigation>

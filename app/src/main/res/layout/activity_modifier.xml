@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentaions.views.activities.ModifierActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/orange_toolbar"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:id="@+id/imageView_back_modifier"
+                    android:layout_width="57dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/kanit_medium"
+                    android:letterSpacing="0.05"
+                    android:text="Modifier"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <TextView
+            android:id="@+id/textview_foodname_modifier"
+            android:layout_width="190dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/kanit_medium"
+            android:text="FoodName"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="262dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="48dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_foodname_modifier">
+
+            <ImageView
+                android:id="@+id/imageView_minus_modifier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/menus" />
+
+            <TextView
+                android:id="@+id/textView_sumOfFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/kanit"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="22dp" />
+
+            <ImageView
+                android:id="@+id/imageView_plus_modifier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/plus" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editText_modifier"
+            android:layout_width="293dp"
+            android:layout_height="86dp"
+            android:layout_marginTop="68dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="modify your food..."
+            android:background="@drawable/edittext_backgound"
+            android:padding="10dp"
+            android:inputType="textMultiLine"
+            android:selectAllOnFocus="false"
+            android:singleLine="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <Switch
+            android:id="@+id/switch_takeAway"
+            android:theme="@style/ToggleSwitchTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="Take away"
+            android:thumbTint="@color/switch_thumb_selector"
+            android:trackTint="#333333"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.228"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_modifier"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+        <Button
+            android:id="@+id/button_save"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_main"
+            android:fontFamily="@font/kanit"
+            android:text="Save"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:textSize="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch_takeAway"
+            app:layout_constraintVertical_bias="0.75" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentaions.views.fragments.MyBillFragment">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textView_bill_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Table"
+        android:textSize="20dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:fontFamily="@font/kanit"/>
+
+    <TextView
+        android:id="@+id/textView_bill_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="@font/kanit"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_myBill"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar_mybill"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="150dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:indeterminateTint="#FFC107" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Quantity"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="@font/kanit"/>
+
+        <TextView
+            android:id="@+id/textview_bill_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{Quantity}"
+            android:textSize="20dp"
+            android:gravity="left"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/kanit"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="@font/kanit"/>
+
+        <TextView
+            android:id="@+id/textview_bill_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{price}"
+            android:textSize="20dp"
+            android:gravity="left"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/kanit"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Vat7%"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="@font/kanit"/>
+
+        <TextView
+            android:id="@+id/textview_bill_vat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{vat}"
+            android:textSize="20dp"
+            android:gravity="left"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/kanit"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Total amount"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="@font/kanit"/>
+
+        <TextView
+            android:id="@+id/textview_bill_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{total}"
+            android:textSize="20dp"
+            android:gravity="left"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/kanit"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_mybill_back"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_main"
+        android:text="BACK"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:clickable="true"
+        android:fontFamily="@font/kanit"/>
+
+
+</LinearLayout>

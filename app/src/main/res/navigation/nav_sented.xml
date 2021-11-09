@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_sented"
+    app:startDestination="@id/fristSentedFragment">
+
+    <fragment
+        android:id="@+id/fristSentedFragment"
+        android:name="com.example.foodmanagement.presentaions.views.fragments.FristSentedFragment"
+        android:label="fragment_frist_sented"
+        tools:layout="@layout/fragment_frist_sented" >
+        <action
+            android:id="@+id/action_fristSentedFragment_to_myBillFragment"
+            app:destination="@id/myBillFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/myBillFragment"
+        android:name="com.example.foodmanagement.presentaions.views.fragments.MyBillFragment"
+        android:label="fragment_my_bill"
+        tools:layout="@layout/fragment_my_bill" >
+        <action
+            android:id="@+id/action_myBillFragment_to_fristSentedFragment"
+            app:destination="@id/fristSentedFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+</navigation>
